@@ -1,0 +1,7 @@
+{:paths ["src" "classes"]
+:deps
+{org.springframework.boot/spring-boot-starter {:mvn/version "2.2.2.RELEASE"}}
+:mvn/repos
+{"central" {:url "https://repo1.maven.org/maven2/"}
+ "clojars" {:url "https://clojars.org/repo"}}
+}
