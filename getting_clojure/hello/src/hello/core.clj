@@ -47,7 +47,7 @@ mymapnoclasses
 
 (def myset #{:foods "food" "bread" "carrots"})
 
-(def )
+
 (set (concat myset #{"food"}))
 (contains? myset "food")
 (myset "food")
