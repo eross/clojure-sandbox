@@ -1,0 +1,49 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - File URLs in stacktrace frames are peekable and clickable.
+clj::hello.core=> 
+; Jack-in done.
+nil
+clj::hello.core=> 
+#'hello.core/greet
+clj::hello.core=> 
+Welcome to  Eric
+nil
+clj::hello.core=> 
+This is my message Eric
+nil
+clj::hello.core=> 
+#'hello.core/greet2
+clj::hello.core=> 
+Welcome home Eric
+nil
+clj::hello.core=> 
+Send me to Eric
+nil
+clj::hello.core=> 
+Welcome home Eric
+nil
+clj::hello.core=> 
+nil
+clj::hello.core=> 
+#'hello.core/print-any-args
+clj::hello.core=> 
+The args are:  (THis is 42)
+nil
+clj::hello.core=> 
+The args are:  (This is 42)
+nil
+clj::hello.core=> 
