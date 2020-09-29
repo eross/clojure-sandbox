@@ -60,3 +60,22 @@ hello.core/x2
   Return 2x
 nil
 clj::hello.core=> 
+nil
+clj::hello.core=> 
+#'hello.core/sum-copies
+clj::hello.core=> 
+-------------------------
+hello.core/sum-copies
+([books] [books total])
+nil
+clj::hello.core=> 
+#'hello.core/notvaridic
+clj::hello.core=> 
+42
+nil
+clj::hello.core=> 
+#'hello.core/notvaridic
+clj::hello.core=> 
+42
+42
+clj::hello.core=> 

@@ -62,3 +62,9 @@
 (normalize-book2 book1)
 (normalize-book2 book2)
 (normalize-book2 book3)
+
+(defn notvaridic [&args]
+  (println &args)
+  &args)
+
+(notvaridic 42)

@@ -66,3 +66,4 @@ mymapnoclasses
 (conj myset myset2)
 
 (disj myset "bread")
+
