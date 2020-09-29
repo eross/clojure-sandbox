@@ -5,6 +5,7 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
+; nREPL Connection was closed
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS: 
@@ -16,26 +17,8 @@
 ;   - File URLs in stacktrace frames are peekable and clickable.
 clj::hello.core=> 
 ; Jack-in done.
-#'hello.core/book1
-clj::hello.core=> 
-#'hello.core/book2
-clj::hello.core=> 
-#'hello.core/book3
-clj::hello.core=> 
-#'hello.core/normalize-book
-clj::hello.core=> 
-{:title "War and Peace", :author "Tolstoy"}
-clj::hello.core=> 
-{:title "Emma", :author "Austen"}
-clj::hello.core=> 
-{:title "1984", :author "Orwell"}
-clj::hello.core=> 
-#'hello.core/dispatch-book-format
-clj::hello.core=> 
-:alternative-map
-clj::hello.core=> 
-; Syntax error compiling at (src/hello/funcargs.clj:58:1).
-; Unable to resolve symbol: normalize-book2 in this context
+; Syntax error compiling at (src/hello/doc.clj:15:1).
+; Unable to resolve symbol: doc in this context
 [{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
  {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
  {:file "Compiler.java" :line 3820 :method "parse" :flags [:tooling :java]}
@@ -66,126 +49,14 @@ clj::hello.core=>
  {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
  {:file "AFn.java" :line 22 :method "run" :flags [:java]}
  {:file "jar:file:/Library/Java/JavaVirtualMachines/openjdk-14.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Thread.java:832" :method "run" :flags [:java]}]
-clj::hello.core=> 
-#'hello.core/normalize-book2
-clj::hello.core=> 
-#multifn[normalize-book2 0x6b4af553]
-clj::hello.core=> 
-; Execution error (IllegalArgumentException) at hello.core/eval32392 (form-init7118670586584491389.clj:58).
-; No method in multimethod 'normalize-book2' for dispatch value: :standard-map
-[{:file "MultiFn.java" :line 156 :method "getFn" :flags [:java]}
- {:file "MultiFn.java" :line 229 :method "invoke" :flags [:java]}
- {:file "file:/Users/ericr/git/clojure-sandbox/getting_clojure/hello/src/hello/core.clj:58" :fn "eval32392"  :method "invokeStatic" :flags [:project :repl :clj]}
- {:file "file:/Users/ericr/git/clojure-sandbox/getting_clojure/hello/src/hello/core.clj:58" :fn "eval32392"  :method "invoke" :flags [:dup :project :repl :clj]}
- {:file "Compiler.java" :line 7177 :method "eval" :flags [:tooling :java]}
- {:file "Compiler.java" :line 7132 :method "eval" :flags [:dup :tooling :java]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl/fn"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:368" :fn "repl"  :method "doInvoke" :flags [:clj]}
- {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "AFn.java" :line 22 :method "run" :flags [:java]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
- {:file "AFn.java" :line 22 :method "run" :flags [:java]}
- {:file "jar:file:/Library/Java/JavaVirtualMachines/openjdk-14.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Thread.java:832" :method "run" :flags [:java]}]
-clj::hello.core=> 
-#multifn[normalize-book2 0x6b4af553]
-clj::hello.core=> 
-{:title "War and Peace", :author "Tolstoy"}
-clj::hello.core=> 
-#multifn[normalize-book2 0x6b4af553]
-clj::hello.core=> 
-{:title "War and Peace", :author "Tolstoy"}
-clj::hello.core=> 
-; Execution error (IllegalArgumentException) at hello.core/eval36391 (form-init7118670586584491389.clj:63).
-; No method in multimethod 'normalize-book2' for dispatch value: :alternative-map
-[{:file "MultiFn.java" :line 156 :method "getFn" :flags [:java]}
- {:file "MultiFn.java" :line 229 :method "invoke" :flags [:java]}
- {:file "file:/Users/ericr/git/clojure-sandbox/getting_clojure/hello/src/hello/core.clj:63" :fn "eval36391"  :method "invokeStatic" :flags [:project :repl :clj]}
- {:file "file:/Users/ericr/git/clojure-sandbox/getting_clojure/hello/src/hello/core.clj:63" :fn "eval36391"  :method "invoke" :flags [:dup :project :repl :clj]}
- {:file "Compiler.java" :line 7177 :method "eval" :flags [:tooling :java]}
- {:file "Compiler.java" :line 7132 :method "eval" :flags [:dup :tooling :java]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl/fn"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:368" :fn "repl"  :method "doInvoke" :flags [:clj]}
- {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "AFn.java" :line 22 :method "run" :flags [:java]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
- {:file "AFn.java" :line 22 :method "run" :flags [:java]}
- {:file "Thread.java" :line 832 :method "run" :flags [:java]}]
-clj::hello.core=> 
-#multifn[normalize-book2 0x6b4af553]
-clj::hello.core=> 
-{:title [:book "Emma"], :author "Austen"}
-clj::hello.core=> 
-{:title "1984", :author "Orwell"}
 clj::hello.core=> 
 nil
 clj::hello.core=> 
-#'hello.core/books
+#'hello.core/x2
 clj::hello.core=> 
-2000000
-clj::hello.core=> 
-#'hello.core/sum-copies
-clj::hello.core=> 
-9000000
-clj::hello.core=> 
-9000000
-clj::hello.core=> 
-9000000
-clj::hello.core=> 
-; Syntax error compiling at (src/hello/recursion.clj:21:3).
-; Unable to resolve symbol: total in this context
-[{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
- {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
- {:file "Compiler.java" :line 3260 :method "parse" :flags [:tooling :java]}
- {:file "Compiler.java" :line 6791 :method "analyze" :flags [:tooling :java]}
- {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
- {:file "Compiler.java" :line 3820 :method "parse" :flags [:tooling :java]}
- {:file "Compiler.java" :line 7109 :method "analyzeSeq" :flags [:tooling :java]}
- {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
- {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
- {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
- {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
- {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
- {:file "Compiler.java" :line 7105 :method "analyzeSeq" :flags [:tooling :java]}
- {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
- {:file "Compiler.java" :line 7174 :method "eval" :flags [:tooling :java]}
- {:file "Compiler.java" :line 7132 :method "eval" :flags [:dup :tooling :java]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl/fn"  :method "invoke" :flags [:clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:368" :fn "repl"  :method "doInvoke" :flags [:clj]}
- {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "AFn.java" :line 22 :method "run" :flags [:java]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
- {:file "jar:file:/Users/ericr/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
- {:file "AFn.java" :line 22 :method "run" :flags [:java]}
- {:file "Thread.java" :line 832 :method "run" :flags [:java]}]
-clj::hello.core=> 
-9000000
+-------------------------
+hello.core/x2
+([x])
+  Return 2x
+nil
 clj::hello.core=> 

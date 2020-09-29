@@ -25,3 +25,17 @@
       (rest books)
       (+ total (:copies-sold (first books))))))
   )
+
+
+(loop [accum [] i 0]
+  (if (= i 10)
+    (do  accum)
+
+    (do
+      (println accum)
+    (recur (conj accum i)(inc i)))
+    ))
+
+(def j '[1 2])
+
+(conj j 3)

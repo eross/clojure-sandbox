@@ -1,5 +1,6 @@
 (ns hello.core)
 
+*clojure-version*
 (defn square [x]
   (* x x x))
 
@@ -56,7 +57,7 @@ mymapnoclasses
 
 (set '("a" "a" "b" "a"))
 
-(def error #{a a a})
+;(def error #{a a a})
 
 (def myset2 #{:drinks "water" "beer" "juice"})
 
