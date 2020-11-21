@@ -4,6 +4,8 @@
 (defn square [x]
   (* x x x))
 
+(square 3)
+
 (defn pow [n p]
   (Math/pow n p))
 
@@ -12,9 +14,17 @@
 (/ 100 1)
 
 (def v (vector "a" "b" 'c))
-(println v)
+(do (println v)v)
+
+(def xx v)
+(def xx ('a 'b 'c))
+(do
+(println xx)
+xx)
 
 (println(rest v))
+
+
 
 (rest(rest (rest v)))
 
