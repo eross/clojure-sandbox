@@ -1,7 +1,13 @@
 (ns hello.core-test
-  (:require [clojure.test :refer :all]
-            [hello.core :refer :all]))
+(:require [clojure.test :refer [is deftest testing]]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(is (= (+ 1 1) 1))
+
+(is (thrown? ArithmeticException (/ 1 1)))
+
+(deftest my-test
+  (testing "1 + 1 = 1"
+    (is (= (+ 1 1) 1)))
+  (testing "Ensure 2 - 1 = 1"
+    (is (= (- 2 1) 1)))
+)
