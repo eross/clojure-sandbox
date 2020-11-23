@@ -5,5 +5,7 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/java.jdbc "0.7.11"]
-            ]
+                       ]
+  :main hello.core
+  :aot [hello.genclass]
   :repl-options {:init-ns hello.core })

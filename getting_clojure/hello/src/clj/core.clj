@@ -9,7 +9,7 @@
 (defn pow [n p]
   (Math/pow n p))
 
-(println "Hello World")
+;;(println "Hello World")
 
 (/ 100 1)
 
@@ -19,10 +19,10 @@
 (def xx v)
 (def xx ('a 'b 'c))
 (do
-(println xx)
+;;(println xx)
 xx)
 
-(println(rest v))
+;;(println(rest v))
 
 
 
@@ -77,3 +77,15 @@ mymapnoclasses
 
 (disj myset "bread")
 
+;; arrays
+
+(def myarray (into-array ["this" "is" "an" "array"]))
+
+(aget myarray 2)
+
+(amap myarray idx ret (aset ret idx (apply str (reverse (aget myarray idx)))))
+
+(reverse (aget myarray 2))
+(apply str (aget myarray 2))
+
+(areduce myarray idx ret (long 0) (+ ret (count (aget myarray idx))))
