@@ -1,0 +1,35 @@
+(ns hello.core)
+
+(defn square [x]
+  (* x x x))
+
+(defn pow [n p]
+  (Math/pow n p))
+
+(println "Hello World")
+
+(/ 100 1)
+
+(def v (vector "a" "b" 'c))
+(println v)
+
+(println(rest v))
+
+(rest(rest (rest v)))
+
+(v 2)
+(vec v)
+(seq v)
+(list v)
+
+(conj v v)
+
+(def poems '(​"Iliad"​ ​"Odyssey"​ ​"Now We Are Six"​))
+(def vectorpoems '["Iliad"​ ​"Odyssey"​ ​"Now We Are Six"​])
+
+["Iliad" "Odyssey" "Now We Are Six"]
+
+(conj poems "jabberwocky")
+(conj vectorpoems "jabberwocky")
+
+[1 2 3]
