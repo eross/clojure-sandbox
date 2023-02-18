@@ -511,3 +511,129 @@ clj꞉ch1.money꞉> 
 clj꞉ch1.apollo꞉> 
 #'ch1.apollo/apollo-4
 clj꞉ch1.apollo꞉> 
+#'ch1.apollo/euclidean-norm
+clj꞉ch1.apollo꞉> 
+ch1.apollo.Planet
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/make-planet
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/make-mission
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/apollo-4
+clj꞉ch1.apollo꞉> 
+nil
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/apollo-4
+clj꞉ch1.apollo꞉> 
+nil
+clj꞉ch1.apollo꞉> 
+; Execution error (NullPointerException) at ch1.apollo/eval8622 (form-init13700253590266285286.clj:79).
+; null
+clj꞉ch1.apollo꞉> 
+ch1.apollo/eval8622 (form-init13700253590266285286.clj:79)
+clojure.lang.Compiler/eval (Compiler.java:7177)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:829)
+clj꞉ch1.apollo꞉> 
+user.Person
+clj꞉user꞉> 
+user.Recipe
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/recipe.clj:15:1).
+; Unable to resolve symbol: eric in this context
+clj꞉user꞉> 
+{:fname "eric", :lname "ross"}
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/recipe.clj:20:7).
+; Expecting var, but Person is mapped to class user.Person
+clj꞉user꞉> 
+; Execution error (ClassCastException) at user/eval8689 (form-init13700253590266285286.clj:20).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉user꞉> 
+{:fname "Alex", :lname "Miller"}
+clj꞉user꞉> 
+; Execution error (ClassCastException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉user꞉> 
+#'user/toast
+clj꞉user꞉> 
+{:name "Toast",
+ :author {:fname "Alex", :lname "Miller"},
+ :description "Crispy bread",
+ :ingredients ["Slice of bread"],
+ :steps ["Toast bread in toaster"],
+ :servings 1}
+clj꞉user꞉> 
+#user.Recipe{:name Toast, :author #user.Person{:fname Alex, :lname Miller}, :description Crispy bread, :ingredients [Slice of bread], :steps [Toast bread in toaster], :servings 1}nil
+clj꞉user꞉> 
+{:name "Toast",
+ :author {:fname "Alex", :lname "Miller"},
+ :description "Crispy bread",
+ :ingredients ["Slice of bread"],
+ :steps ["Toast bread in toaster"],
+ :servings 1}
+clj꞉user꞉> 
+{:fname "Alex", :lname "Miller"}
+clj꞉user꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (1) passed to: clojure.core/defrecord
+clj꞉user꞉> 
+user.Tst
+clj꞉user꞉> 
+user.Tst
+clj꞉user꞉> 
+#'user/tst
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#namespace[user]
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/recipe.clj:1:7920).
+; Unable to resolve symbol: tst in this context
+clj꞉user꞉> 
+; Syntax error macroexpanding defmulti at (src/ch1/multimethods.clj:1:1).
+; The syntax for defmulti has changed. Example: (defmulti name dispatch-fn :default dispatch-value)
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:3:1).
+; Unable to resolve symbol: cost in this context
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:3:1).
+; Unable to resolve symbol: cost in this context
+clj꞉user꞉> 
+; Execution error (FileNotFoundException) at ch1.multimethods/eval8733$loading (form-init13700253590266285286.clj:9).
+; Could not locate ch1/validate__init.class, ch1/validate.clj or ch1/validate.cljc on classpath.
+clj꞉ch1.multimethods꞉> 
+; Execution error (FileNotFoundException) at ch1.multimethods/eval8739$loading (form-init13700253590266285286.clj:9).
+; Could not locate ch1/validate__init.class, ch1/validate.clj or ch1/validate.cljc on classpath.
+clj꞉ch1.multimethods꞉> 
+ch1.multimethods.Store
+clj꞉ch1.multimethods꞉> 
+#'ch1.multimethods/cost-of
+clj꞉ch1.multimethods꞉> 
+#'ch1.multimethods/cost
+clj꞉ch1.multimethods꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:1:7920).
+; Unable to resolve symbol: entity in this context
+clj꞉ch1.multimethods꞉> 
+nil
+clj꞉ch1.multimethods꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:23:1).
+; Unable to resolve symbol: Recipe in this context
+clj꞉ch1.multimethods꞉> 

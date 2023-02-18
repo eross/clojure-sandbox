@@ -76,6 +76,7 @@
                             false
                             :orbits 3))
 ;
+(apollo-4)
 
 ;
 (defn euclidean-norm [ecc-vector])
@@ -90,3 +91,4 @@
    name moons volume mass aphelion perhelion
    (euclidean-norm ecc-vector)))
 ;
+
