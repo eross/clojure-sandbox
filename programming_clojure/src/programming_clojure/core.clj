@@ -91,7 +91,7 @@
   )
 
 (comment
-  ;; fp
+  ;; fp -- how to be lazy
   ;; wrong way to do it -- consume stack
   (defn stack-consuming-fibo [n]
     (cond
@@ -102,5 +102,24 @@
   (stack-consuming-fibo 10)
 
   ;;tail recursion
+(defn tail-fibo [n]
+  (letfn[(fib
+          [current next n]
+          (if (zero? n)
+            current
+            (fib next (+ current next)(dec n))))]
+    (fib 0N 1N n)))
+  (tail-fibo 1000)
+  (count (.toString (tail-fibo 1000)))
+
+;; recur
+  (defn recur-fibo [n]
+    (letfn [(fib
+              [current next n]
+              (if (zero? n)
+                current
+                (recur next (+ current next) (dec n))))]
+      (fib 0N 1N n)))
+  (recur-fibo 100000)
   :fcf
   )
