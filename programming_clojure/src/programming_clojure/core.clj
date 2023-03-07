@@ -59,3 +59,48 @@
     ))
   (by-pairs ht)
   :fcf)
+
+(comment
+  (defn msg
+    ([] (println "Hello There") 'done)
+    ([name] (print "Hello " name) 'done2)
+  )
+  
+  (msg)
+  (msg 'Eric)
+  :fcf)
+
+(comment
+  (def file 42)
+  (.toString file)
+  (clojure.core/str file)
+
+  ;; More destructuring with a string
+  (let [[first-char second-char & rest-of-chars] "abcde"]
+    (prn 'first= first-char)
+    (prn 'second= second-char)
+    (prn 'rest= rest-of-chars)
+    (prn (.toString rest-of-chars)))
+
+  ;; Destructuring, getting the first character of a string
+;; and then a reference to the entire string
+  (let [[first-char :as all-the-string] "abcde"]
+    (prn 'first= first-char)
+    (prn 'all= all-the-string))
+  :fcf
+  )
+
+(comment
+  ;; fp
+  ;; wrong way to do it -- consume stack
+  (defn stack-consuming-fibo [n]
+    (cond
+      (= n 0) 0
+      (= n 1) 1
+      :else (+ (stack-consuming-fibo (- n 1))
+      (stack-consuming-fibo (- n 2)))))
+  (stack-consuming-fibo 10)
+
+  ;;tail recursion
+  :fcf
+  )
