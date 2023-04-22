@@ -123,3 +123,38 @@
   (recur-fibo 100000)
   :fcf
   )
+
+(comment
+  *ns*
+  (find-ns 'programming-clojure.core)
+  (= *ns* (find-ns 'programming-clojure.core))
+  (ns-unmap *ns* 'c)
+  (ns-unmap *ns* 'take-pair)
+  c
+  (def h '[:h :t :t :h :h :h])
+
+  (defn by-pairs [c]
+    (let [take-pair (take-pairx c)] take-pair))
+
+
+  (by-pairs h)
+
+  (lazy-seq
+   (when-let [pair (seq (take-pair c2))] pair))
+
+
+  ((by-pairs h))
+  (defn take-pairx [c]
+    (when (next c) (take 2 c)))
+  (def c h)
+  (when-let [pair (seq (take-pair c))]
+    (cons pair (rest c)))
+
+  (class (take-pair h)) ;lazy-seq
+  (class (seq (take-pair h))) ;cons
+  
+  (lazy-seq h)
+
+
+  :fcf
+  )
