@@ -1,20 +1,639 @@
 ; This is the Calva evaluation results output window.
-; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
 ;   when connected to a REPL session.
 ; Please see https://calva.io/output/ for more info.
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.25.8"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
-; TIPS: 
+; TIPS:
 ;   - You can edit the contents here. Use it as a REPL if you like.
 ;   - `alt+enter` evaluates the current top level form.
 ;   - `ctrl+enter` evaluates the current form.
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉hello.core꞉> 
+clj꞉hello.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉hello.core꞉> 
+nil
+clj꞉hello-repl꞉> 
+"Welcome to the Getting Started REPL! 💜"
+clj꞉hello-repl꞉> 
+"Hello World!"
+clj꞉hello-repl꞉> 
+("I am using the REPL! 💪"
+ "I am using the REPL! 💪"
+ "I am using the REPL! 💪"
+ "I am using the REPL! 💪"
+ "I am using the REPL! 💪"
+ "I am using the REPL! 💪"
+ "I am using the REPL! 💪")
+clj꞉hello-repl꞉> 
+("Give me an R! ~•~ R!" "Give me an E! ~•~ E!" "Give me a  P! ~•~ P!" "Give me an L! ~•~ L!" "What do you get?" "REPL!")
+clj꞉hello-repl꞉> 
+("Give me an R! ~•~ R!" "Give me an E! ~•~ E!" "Give me a  P! ~•~ P!" "Give me an L! ~•~ L!" "What do you get?" "REPL!")
+clj꞉hello-repl꞉> 
+("Give me an R! ~•~ R!" "Give me an E! ~•~ E!" "Give me a  P! ~•~ P!" "Give me an L! ~•~ L!" "What do you get?" "REPL!")
+clj꞉hello-repl꞉> 
+nil
+clj꞉hello.core꞉> 
+#'hello.core/square
+clj꞉hello.core꞉> 
+27
+clj꞉hello.core꞉> 
+#'hello.core/pow
+clj꞉hello.core꞉> 
+#'hello.core/pow
+clj꞉hello.core꞉> 
+100
+clj꞉hello.core꞉> 
+#'hello.core/v
+clj꞉hello.core꞉> 
+[a b c]
+["a" "b" c]
+clj꞉hello.core꞉> 
+#'hello.core/xx
+clj꞉hello.core꞉> 
+#'hello.core/xx
+clj꞉hello.core꞉> 
+c
+clj꞉hello.core꞉> 
+c
+nil
+clj꞉hello.core꞉> 
+c
+c
+clj꞉hello.core꞉> 
+42
+nil
+clj꞉hello.core꞉> 
+c
+nil
+clj꞉hello.core꞉> 
+c
+nil
+clj꞉hello.core꞉> 
+c
+nil
+clj꞉hello.core꞉> 
+[a b c]
+nil
+clj꞉hello.core꞉> 
+#'hello.core/xx
+clj꞉hello.core꞉> 
+[a b c]
+nil
+clj꞉hello.core꞉> 
+#'hello.core/xx
+clj꞉hello.core꞉> 
+c
+nil
+clj꞉hello.core꞉> 
+; Execution error (ArityException) at hello.core/eval8012 (form-init13700253590266285286.clj:22).
+; Wrong number of args (0) passed to: clojure.lang.Symbol
+clj꞉hello.core꞉> 
+nil
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:23:1).
+; Unable to resolve symbol: doc in this context
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:23:1).
+; Unable to resolve symbol: doc in this context
+clj꞉hello.core꞉> 
+c
+clj꞉hello.core꞉> 
+; Execution error (ArityException) at hello.core/eval8020 (form-init13700253590266285286.clj:24).
+; Wrong number of args (3) passed to: clojure.lang.Symbol
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:24:1).
+; Unable to resolve symbol: a in this context
+clj꞉hello.core꞉> 
+c
+clj꞉hello.core꞉> 
+c
+clj꞉hello.core꞉> 
+[a b c]
+["a" "b" c]
+clj꞉hello.core꞉> 
+()
+clj꞉hello.core꞉> 
+c
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:25:1).
+; Unable to resolve symbol: a in this context
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:25:1).
+; Unable to resolve symbol: a in this context
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:25:1).
+; Unable to resolve symbol: a in this context
+clj꞉hello.core꞉> 
+c
+clj꞉hello.core꞉> 
+["a" "b" c]
+clj꞉hello.core꞉> 
+("a" "b" c)
+clj꞉hello.core꞉> 
+(["a" "b" c])
+clj꞉hello.core꞉> 
+["a" "b" c ["a" "b" c]]
+clj꞉hello.core꞉> 
+#'hello.core/poems
+clj꞉hello.core꞉> 
+("jabberwocky" ​ "Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​)
+clj꞉hello.core꞉> 
+#'hello.core/vectorpoems
+clj꞉hello.core꞉> 
+["Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​ "jabberwocky"]
+clj꞉hello.core꞉> 
+(["a" "b" c] ​ "Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​)
+clj꞉hello.core꞉> 
+["a" "b" c (​ "Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​)]
+clj꞉hello.core꞉> 
+("a" "b" c ​ "Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​)
+clj꞉hello.core꞉> 
+#'hello.core/mymap
+clj꞉hello.core꞉> 
+"Eric"
+clj꞉hello.core꞉> 
+#'hello.core/mymapnoclasses
+clj꞉hello.core꞉> 
+{:name "Eric", :age 42}
+clj꞉hello.core꞉> 
+{:name "Eric", :age 42, :classes ["cs100" "cs102"]}
+clj꞉hello.core꞉> 
+{:name "Eric", :age 42}
+clj꞉hello.core꞉> 
+#'hello.core/myset
+clj꞉hello.core꞉> 
+#{"bread" :foods "food" "carrots"}
+clj꞉hello.core꞉> 
+#{"bread" :foods "food" "carrots"}
+clj꞉hello.core꞉> 
+true
+clj꞉hello.core꞉> 
+"food"
+clj꞉hello.core꞉> 
+nil
+clj꞉hello.core꞉> 
+:foods
+clj꞉hello.core꞉> 
+#'hello.core/myset2
+clj꞉hello.core꞉> 
+#{"bread" :foods "food" "carrots"}
+clj꞉hello.core꞉> 
+#{"bread" :foods "food" "chocolate" "carrots"}
+clj꞉hello.core꞉> 
+#'hello.core/fn-with-opts
+clj꞉hello.core꞉> 
+(\a \b "c" "d")
+clj꞉hello.core꞉> 
+#'hello.core/fn-with-opts
+clj꞉hello.core꞉> 
+; Execution error (ClassCastException) at hello.core/fn-with-opts (form-init13700253590266285286.clj:101).
+; class java.lang.String cannot be cast to class clojure.lang.IPersistentCollection (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉hello.core꞉> 
+#'hello.core/fn-with-opts
+clj꞉hello.core꞉> 
+(\a \b "c" "d")
+clj꞉hello.core꞉> 
+; Syntax error compiling at (src/hello/core.clj:101:3).
+; Unable to resolve symbol: c in this context
+clj꞉hello.core꞉> 
+#'hello.core/fn-with-opts
+clj꞉hello.core꞉> 
+(c d)
+(\a \b "c" "d")
+clj꞉hello.core꞉> 
+nil
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+ch1.money.Currency
+clj꞉ch1.money꞉> 
+ch1.money.Money
+clj꞉ch1.money꞉> 
+#'ch1.money/currencies
+clj꞉ch1.money꞉> 
+{:usd {:divisor 100, :sym "USD", :desc "US Dollars"}, :eur {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+#'ch1.money/currencies
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "EUR", :desc "Euro"}
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+#'ch1.money/m1
+clj꞉ch1.money꞉> 
+#'ch1.money/m2
+clj꞉ch1.money꞉> 
+{:m1 {:divisor 100, :sym "USD", :desc "US Dollars"}, :m2 {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉ch1.money꞉> 
+#error {
+ :cause "Currencies do not match."
+ :data {:m1 #ch1.money.Currency{:divisor 100, :sym "USD", :desc "US Dollars"}, :m2 #ch1.money.Currency{:divisor 100, :sym "EUR", :desc "Euro"}}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Currencies do not match."
+   :data {:m1 #ch1.money.Currency{:divisor 100, :sym "USD", :desc "US Dollars"}, :m2 #ch1.money.Currency{:divisor 100, :sym "EUR", :desc "Euro"}}
+   :at [ch1.money$eval8178 invokeStatic "form-init13700253590266285286.clj" 19]}]
+ :trace
+ [[ch1.money$eval8178 invokeStatic "form-init13700253590266285286.clj" 19]
+  [ch1.money$eval8178 invoke "form-init13700253590266285286.clj" 19]
+  [clojure.lang.Compiler eval "Compiler.java" 7177]
+  [clojure.lang.Compiler eval "Compiler.java" 7132]
+  [clojure.core$eval invokeStatic "core.clj" 3214]
+  [clojure.core$eval invoke "core.clj" 3210]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__1335$fn__1336 invoke "interruptible_eval.clj" 87]
+  [clojure.lang.AFn applyToHelper "AFn.java" 152]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 665]
+  [clojure.core$with_bindings_STAR_ invokeStatic "core.clj" 1973]
+  [clojure.core$with_bindings_STAR_ doInvoke "core.clj" 1973]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__1335 invoke "interruptible_eval.clj" 87]
+  [clojure.main$repl$read_eval_print__9086$fn__9089 invoke "main.clj" 437]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 437]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1368$fn__1372 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1437$fn__1441 invoke "session.clj" 218]
+  [nrepl.middleware.session$session_exec$main_loop__1437 invoke "session.clj" 217]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 829]]}
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+0
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+ch1.money.Point
+clj꞉ch1.money꞉> 
+; Execution error at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Expecting var, but Point is mapped to class ch1.money.Point
+clj꞉ch1.money꞉> 
+{:x 1, :y 2}
+clj꞉ch1.money꞉> 
+{:x 1, :y 2}
+clj꞉ch1.money꞉> 
+3
+clj꞉ch1.money꞉> 
+ch1.money.NamedPoint
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/eval8247 (form-init13700253590266285286.clj:22).
+; No matching method NamedPoint found taking 1 args for class java.lang.Long
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/eval8249 (form-init13700253590266285286.clj:22).
+; No matching method NamedPoint found taking 2 args for class java.lang.String
+clj꞉ch1.money꞉> 
+ch1.money.NamedPoint
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/eval8278 (form-init13700253590266285286.clj:22).
+; No matching method NamedPoint found taking 2 args for class java.lang.String
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/eval8280 (form-init13700253590266285286.clj:22).
+; No matching method NamedPoint found taking 2 args for class java.lang.String
+clj꞉ch1.money꞉> 
+ch1.money.NamedPoint
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/eval8309 (form-init13700253590266285286.clj:22).
+; No matching method NamedPoint found taking 2 args for class java.lang.String
+clj꞉ch1.money꞉> 
+ch1.money.NamedPoint
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/eval8338 (form-init13700253590266285286.clj:22).
+; No matching method NamedPoint found taking 2 args for class java.lang.String
+clj꞉ch1.money꞉> 
+{:name "first", :x 3, :y 4}
+clj꞉ch1.money꞉> 
+[name x y]
+clj꞉ch1.money꞉> 
+({:tag String} {:tag long} {:tag long})
+clj꞉ch1.money꞉> 
+#'ch1.money/m1
+clj꞉ch1.money꞉> 
+#'ch1.money/m2
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "EUR", :desc "Euro"}
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+#'ch1.money/mypoint
+clj꞉ch1.money꞉> 
+{:x 22, :y 33}
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+({:tag String} {:tag long} {:tag long})
+clj꞉ch1.money꞉> 
+{:x 22, :y 33}
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+{:x 22, :y 33}
+clj꞉ch1.money꞉> 
+#'ch1.money/mypoint2
+clj꞉ch1.money꞉> 
+{:x 22, :y 33}
+clj꞉ch1.money꞉> 
+{:x 22, :y 33}
+clj꞉ch1.money꞉> 
+; Syntax error compiling at (src/ch1/money.clj:30:25).
+; Unable to resolve symbol: compareTo in this context
+clj꞉ch1.money꞉> 
+; Syntax error compiling at (src/ch1/money.clj:30:25).
+; Unable to resolve symbol: compareTo in this context
+clj꞉ch1.money꞉> 
+java.lang.Comparable
+clj꞉ch1.money꞉> 
+; Syntax error compiling at (src/ch1/money.clj:31:24).
+; Unable to resolve symbol: compareTo in this context
+clj꞉ch1.money꞉> 
+-1
+clj꞉ch1.money꞉> 
+0
+clj꞉ch1.money꞉> 
+1
+clj꞉ch1.money꞉> 
+ch1.money.Money
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+{:divisor 100, :sym "USD", :desc "US Dollars"}
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+"USD"
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+; Execution error (ExceptionInfo) at ch1.money/validate-same-currency (form-init13700253590266285286.clj:43).
+; Currencies do not match.
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+; Execution error (ExceptionInfo) at ch1.money/validate-same-currency (form-init13700253590266285286.clj:43).
+; Currencies do not match.
+clj꞉ch1.money꞉> 
+ch1.money.Money
+clj꞉ch1.money꞉> 
+; Execution error (ExceptionInfo) at ch1.money/validate-same-currency (form-init13700253590266285286.clj:43).
+; Currencies do not match.
+clj꞉ch1.money꞉> 
+; Execution error (ExceptionInfo) at ch1.money/validate-same-currency (form-init13700253590266285286.clj:43).
+; Currencies do not match.
+clj꞉ch1.money꞉> 
+#'ch1.money/=$
+clj꞉ch1.money꞉> 
+true
+clj꞉ch1.money꞉> 
+#'ch1.money/=$
+clj꞉ch1.money꞉> 
+; Execution error (IllegalArgumentException) at ch1.money/= (form-init13700253590266285286.clj:47).
+; No matching method compareTo found taking 1 args for class ch1.money.Currency
+clj꞉ch1.money꞉> 
+; Syntax error (ArityException) compiling zero? at (src/ch1/money.clj:47:14).
+; Wrong number of args (2) passed to: clojure.core/zero?--inliner--5518
+clj꞉ch1.money꞉> 
+#'ch1.money/=$
+clj꞉ch1.money꞉> 
+; Execution error (ClassCastException) at ch1.money/= (form-init13700253590266285286.clj:47).
+; class java.lang.Class cannot be cast to class clojure.lang.IFn (java.lang.Class is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉ch1.money꞉> 
+; Syntax error compiling at (src/ch1/money.clj:47:43).
+; Unable to resolve symbol: compareTo in this context
+clj꞉ch1.money꞉> 
+#'ch1.money/=$
+clj꞉ch1.money꞉> 
+#'ch1.money/=$
+clj꞉ch1.money꞉> 
+; Execution error (ClassCastException) at ch1.money/= (form-init13700253590266285286.clj:47).
+; class java.lang.Class cannot be cast to class clojure.lang.IFn (java.lang.Class is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉ch1.money꞉> 
+nil
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+ch1.money.Currency
+clj꞉ch1.money꞉> 
+ch1.money.Money
+clj꞉ch1.money꞉> 
+#'ch1.money/currencies
+clj꞉ch1.money꞉> 
+#'ch1.money/validate-same-currency
+clj꞉ch1.money꞉> 
+#'ch1.money/=$
+clj꞉ch1.money꞉> 
+#'ch1.money/+$
+clj꞉ch1.money꞉> 
+#'ch1.money/*$
+clj꞉ch1.money꞉> 
+#'ch1.money/make-money
+clj꞉ch1.money꞉> 
+#'ch1.money/-$
+clj꞉ch1.money꞉> 
+#'ch1.money/allocate
+clj꞉ch1.money꞉> 
+#'ch1.money/zero-dollars
+clj꞉ch1.money꞉> 
+{:amount 0, :currency :usd}
+clj꞉ch1.money꞉> 
+{:amount 1, :currency :usd}
+clj꞉ch1.money꞉> 
+{:amount 5, :currency {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉ch1.money꞉> 
+{:amount 1, :currency :usd}
+clj꞉ch1.money꞉> 
+{:amount 0, :currency :usd}
+clj꞉ch1.money꞉> 
+#'ch1.apollo/make-mission
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/apollo-4
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/euclidean-norm
+clj꞉ch1.apollo꞉> 
+ch1.apollo.Planet
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/make-planet
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/make-mission
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/apollo-4
+clj꞉ch1.apollo꞉> 
+nil
+clj꞉ch1.apollo꞉> 
+#'ch1.apollo/apollo-4
+clj꞉ch1.apollo꞉> 
+nil
+clj꞉ch1.apollo꞉> 
+; Execution error (NullPointerException) at ch1.apollo/eval8622 (form-init13700253590266285286.clj:79).
+; null
+clj꞉ch1.apollo꞉> 
+ch1.apollo/eval8622 (form-init13700253590266285286.clj:79)
+clojure.lang.Compiler/eval (Compiler.java:7177)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:829)
+clj꞉ch1.apollo꞉> 
+user.Person
+clj꞉user꞉> 
+user.Recipe
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/recipe.clj:15:1).
+; Unable to resolve symbol: eric in this context
+clj꞉user꞉> 
+{:fname "eric", :lname "ross"}
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/recipe.clj:20:7).
+; Expecting var, but Person is mapped to class user.Person
+clj꞉user꞉> 
+; Execution error (ClassCastException) at user/eval8689 (form-init13700253590266285286.clj:20).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉user꞉> 
+{:fname "Alex", :lname "Miller"}
+clj꞉user꞉> 
+; Execution error (ClassCastException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉user꞉> 
+#'user/toast
+clj꞉user꞉> 
+{:name "Toast",
+ :author {:fname "Alex", :lname "Miller"},
+ :description "Crispy bread",
+ :ingredients ["Slice of bread"],
+ :steps ["Toast bread in toaster"],
+ :servings 1}
+clj꞉user꞉> 
+#user.Recipe{:name Toast, :author #user.Person{:fname Alex, :lname Miller}, :description Crispy bread, :ingredients [Slice of bread], :steps [Toast bread in toaster], :servings 1}nil
+clj꞉user꞉> 
+{:name "Toast",
+ :author {:fname "Alex", :lname "Miller"},
+ :description "Crispy bread",
+ :ingredients ["Slice of bread"],
+ :steps ["Toast bread in toaster"],
+ :servings 1}
+clj꞉user꞉> 
+{:fname "Alex", :lname "Miller"}
+clj꞉user꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (1) passed to: clojure.core/defrecord
+clj꞉user꞉> 
+user.Tst
+clj꞉user꞉> 
+user.Tst
+clj꞉user꞉> 
+#'user/tst
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#namespace[user]
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/recipe.clj:1:7920).
+; Unable to resolve symbol: tst in this context
+clj꞉user꞉> 
+; Syntax error macroexpanding defmulti at (src/ch1/multimethods.clj:1:1).
+; The syntax for defmulti has changed. Example: (defmulti name dispatch-fn :default dispatch-value)
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:3:1).
+; Unable to resolve symbol: cost in this context
+clj꞉user꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:3:1).
+; Unable to resolve symbol: cost in this context
+clj꞉user꞉> 
+; Execution error (FileNotFoundException) at ch1.multimethods/eval8733$loading (form-init13700253590266285286.clj:9).
+; Could not locate ch1/validate__init.class, ch1/validate.clj or ch1/validate.cljc on classpath.
+clj꞉ch1.multimethods꞉> 
+; Execution error (FileNotFoundException) at ch1.multimethods/eval8739$loading (form-init13700253590266285286.clj:9).
+; Could not locate ch1/validate__init.class, ch1/validate.clj or ch1/validate.cljc on classpath.
+clj꞉ch1.multimethods꞉> 
+ch1.multimethods.Store
+clj꞉ch1.multimethods꞉> 
+#'ch1.multimethods/cost-of
+clj꞉ch1.multimethods꞉> 
+#'ch1.multimethods/cost
+clj꞉ch1.multimethods꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:1:7920).
+; Unable to resolve symbol: entity in this context
+clj꞉ch1.multimethods꞉> 
+nil
+clj꞉ch1.multimethods꞉> 
+; Syntax error compiling at (src/ch1/multimethods.clj:23:1).
+; Unable to resolve symbol: Recipe in this context
+clj꞉ch1.multimethods꞉> 

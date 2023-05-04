@@ -14,14 +14,21 @@
 (/ 100 1)
 
 (def v (vector "a" "b" 'c))
+(println v)
 (do (println v)v)
 
 (def xx v)
 (def xx ('a 'b 'c))
+('a 'b)
+('a 'b 'c)
+('a 'd 'c)
+('a 'b 'c)
+(println xx)
 (do
-;;(println xx)
-xx)
+ (println v)
+v)
 
+(println 42)
 ;;(println(rest v))
 
 
@@ -50,7 +57,7 @@ xx)
 [1 2 3]
 
 (def mymap {:name "Eric" :age 42 :classes ["cs100" "cs102"]})
-
+mymap
 (mymap :name)
 
 (def mymapnoclasses (dissoc mymap :classes))
@@ -58,7 +65,7 @@ mymapnoclasses
 
 (def myset #{:foods "food" "bread" "carrots"})
 
-
+myset
 (set (concat myset #{"food"}))
 (contains? myset "food")
 (myset "food")
@@ -89,3 +96,9 @@ mymapnoclasses
 (apply str (aget myarray 2))
 
 (areduce myarray idx ret (long 0) (+ ret (count (aget myarray idx))))
+
+(defn fn-with-opts [a b & c]
+  (println c)
+  (concat a b c))
+
+(fn-with-opts "a" "b" "c" "d")

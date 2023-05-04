@@ -1,0 +1,1 @@
+(defmulti cost (fn [entity store]) (class entity))
