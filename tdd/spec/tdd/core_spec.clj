@@ -2,6 +2,11 @@
   (:require [speclj.core :refer :all]
             [tdd.core :refer :all]))
 
-(describe "a test"
-  (it "FIXME, I fail."
-    (should= 0 1)))
+(comment ((describe "a test"
+            (it "FIXME, I fail."
+                (should= 0 1)))))
+
+
+(describe "hello"
+          (it "foo"
+              (should= 43 (foo))))

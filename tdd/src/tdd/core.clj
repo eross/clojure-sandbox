@@ -2,4 +2,7 @@
 
 (defn -main
   [& args]
-  (println "Hello World"))
+  (println "Hello World Again"))
+
+(defn foo []
+  (+ 1 42))
