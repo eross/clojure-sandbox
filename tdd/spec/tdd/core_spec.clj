@@ -1,6 +1,6 @@
 (ns tdd.core-spec
   (:require [speclj.core :refer :all]
-            [tdd.core :refer :all]))
+            [tdd.core :refer [foo]]))
 
 (comment ((describe "a test"
             (it "FIXME, I fail."
