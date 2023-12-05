@@ -20,3 +20,8 @@
 (should= 77 (calvalue"treb7uchet"))
 
 (should= 142 (sumcalvalues caldocs))
+rf
+
+(rf "spec/adventcode/advent1.txt")
+
+(sumcalvalues (rf "src/adventcode/advent1.txt"))

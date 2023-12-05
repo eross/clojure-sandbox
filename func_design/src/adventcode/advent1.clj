@@ -1,25 +1,32 @@
 (ns adventcode.advent1
   (:require [clojure.string :as str]
-            )
-)
-
-
-
-(defn calvalue1 [s]
-  (str/join "" (re-seq #"\d+" s)))
+            ))
 
 (defn calvalue [s]
   (let [res (re-seq #"\d+" s)]
-    (str/join(concat (first res) (last res)))))
+    (print (Long/parseLong (str/join(concat (first res) (last res)))))
+    (print "\n")
+    0
+    )
+  )
 
-(def f (calvalue "1xy3z2bc"))
-f
-(str/join "" f)
-(first caldoc)
+(defn sumcalvalues [v]
+  (loop [docs v res 0]
+    (if (empty? docs)
+      res
+      (recur (rest docs) (+ res (calvalue (first docs))))))
+  )
 
-(def f (first caldoc))
+(defn readfile [s]
+  (str/split-lines (slurp s))
+  )
 
-f
-(seq f)
+(defn rf [s]
+  (str/split-lines (slurp s)))
 
-(str/join "" (re-seq #"\d+" f))
+
+(defn main []
+       (print (sumcalvalues (readfile "advent1.txt" ))))
+
+(print (sumcalvalues (readfile "advent1.txt")))
+(print "\n")
