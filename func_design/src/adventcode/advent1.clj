@@ -3,20 +3,23 @@
             )
 )
 
-(def caldoc [
-             "1abc2"
-             "pqr3stu8vwx"
-             "a1b2c3d4e5f"
-             "treb7uchet"
-])
+
+
+(defn calvalue1 [s]
+  (str/join "" (re-seq #"\d+" s)))
 
 (defn calvalue [s]
-  (str/split s #""))
+  (let [res (re-seq #"\d+" s)]
+    (str/join(concat (first res) (last res)))))
 
+(def f (calvalue "1xy3z2bc"))
+f
+(str/join "" f)
 (first caldoc)
 
 (def f (first caldoc))
 
-(str/split f #"")
+f
+(seq f)
 
-(str/split f #"\s+")
+(str/join "" (re-seq #"\d+" f))
