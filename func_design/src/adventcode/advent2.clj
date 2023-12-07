@@ -8,3 +8,6 @@
     (cons id [colors])
     )
   )
+
+(defn split-comma-seq [v]
+  (str/split v #",\s+"))
