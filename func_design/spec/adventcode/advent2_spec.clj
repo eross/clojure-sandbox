@@ -11,13 +11,19 @@
    "Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red"
    "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"])
 
+(str/split (first samples) #":\s+" )
 
-
+(def g1 (getgames (first samples)))
 
 g1
 (should= '["Game 1" "3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"] (str/split (first samples) #":\s+") )
 (def g1 (str/split (first samples) #":\s+"))
-(should= '("Game 1" "3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green" ) (getgame  g1))       
-(should= "Game 1" (first (getgame g1)))
-(should= '("3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green") (rest (getgame g1)))
+(should= '("Game 1" "3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green" ) (getgames  (first samples)))       
+(should= '("3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green") (rest (getgames (first samples))))
+
+(cons "xxx" ["yyy" "fff"])
+(def v "1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue")
+(str/split v #";\s+")
+
+(cons 1 [2])
 
