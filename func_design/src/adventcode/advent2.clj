@@ -9,5 +9,9 @@
     )
   )
 
-(defn split-comma-seq [v]
-  (str/split v #",\s+"))
+(defn split-comma-vec [v]
+  (seq(str/split v #",\s+")))
+
+(defn split-color-pair-seq [v]
+  (seq (Long/parseLong (first v)) (last v) )
+  )

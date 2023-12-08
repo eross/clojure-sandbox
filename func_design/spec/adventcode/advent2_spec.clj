@@ -23,9 +23,11 @@ g1
 
 (cons "xxx" ["yyy" "fff"])
 (def v "1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue")
+v
 (def v2 (str/split v #";\s+"))
-(should= ["3 blue" "4 red"] (split-comma-seq "3 blue, 4 red" ))
-(should= ["3 blue"] (split-comma-seq "3 blue"))
+v2
+(should= '("3 blue" "4 red") (split-comma-vec "3 blue, 4 red" ))
+(should= '(3 "blue") (split-color-pair-seq "3 blue"))
 
 (loop [vlst v2 res []]
   (if (empty? vlst)
@@ -36,7 +38,7 @@ g1
     )
 )
 
-(cons 1 [2])
+(cons "1" [2])
 (conj ['( 1 2)] [(first v2)])
 (cons [(first v2)] '(1 2))
 (empty? ())
@@ -48,3 +50,18 @@ v3
 (first v3)
 (str/split (first v3) #"\s+")
 (let [[num color] (str/split (first v3) #"\s+")] [num color])
+(seq ["x" "b"])
+(split-comma-vec "3 blue, 4 red")
+
+(last '(a b c))
+(def v '(3 "blue"))
+(first v)
+(seq ((first v)) (last v))
+
+(def v "3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green")
+
+(loop [[cl v res []]] 
+  (if (empty? cl)
+    res
+    (recur (rest cl) (cons (first cl)))))
+(str/split v #";\s+")
