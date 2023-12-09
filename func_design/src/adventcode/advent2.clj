@@ -13,5 +13,8 @@
   (seq(str/split v #",\s+")))
 
 (defn split-color-pair-seq [v]
-  (seq (Long/parseLong (first v)) (last v) )
-  )
+  (let [[num color] (str/split v #"\s+")] 
+    (list (Long/parseLong num) color)
+      )
+)
+  
