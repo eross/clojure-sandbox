@@ -26,12 +26,16 @@ g1
 v
 (def v2 (str/split v #";\s+"))
 v2
+(seq v2)
+(split-comma-vec (nth v2 2))
+(map (seq v2) #(split-comma-vec %1) )
 (should= '("3 blue" "4 red") (split-comma-vec "3 blue, 4 red" ))
-(should= '(3 "blue") (split-color-pair-seq "3 blue"))
+(should= '(3 :blue) (split-color-pair-seq "3 blue"))
 
 ;=======
 
-
+(def a {})
+(map  )
 
 (loop [vlst v2 res []]
   (if (empty? vlst)
@@ -69,3 +73,5 @@ v3
     res
     (recur (rest cl) (cons (first cl)))))
 (str/split v #";\s+")
+
+(str "x" "abc")

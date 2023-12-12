@@ -14,7 +14,7 @@
 
 (defn split-color-pair-seq [v]
   (let [[num color] (str/split v #"\s+")] 
-    (list (Long/parseLong num) color)
+    (list (Long/parseLong num) (keyword color))
       )
 )
   
