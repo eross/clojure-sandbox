@@ -17,4 +17,4 @@
     (list (Long/parseLong num) (keyword color))
       )
 )
-  
+

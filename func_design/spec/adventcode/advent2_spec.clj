@@ -12,7 +12,7 @@
    "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"])
 
 (str/split (first samples) #":\s+" )
-str/split
+
 (def g1 (getgames (first samples)))
 
 g1
@@ -86,17 +86,23 @@ v
 ;("3 blue" "4 red")
 v4
 (split-color-pair-seq (first v4))
+(def tpair
 (loop [cl v4 res nil]
   (println cl)
   (if (empty? cl)
     res
-    (recur (rest cl) (conj res (split-color-pair-seq(first cl))))))
-
+    (recur (rest cl) (conj res (split-color-pair-seq(first cl)))))))
+tpair
 (def x '(3 :blue))
 (def y '((4 :red)))
 y
 x
-(cons x y)
-(merge x y)
-(concat x y)
-(flatten [x y])
+(cons tpair)
+(merge tpair)
+(concat tpair)
+(def flatpair (flatten tpair))
+flatpair
+(def allpairs '((4 :red)(3 :blue)(7 :pink) (6 :rec)))
+
+allpairs
+
