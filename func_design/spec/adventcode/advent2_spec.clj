@@ -27,8 +27,13 @@ v
 (def v2 (str/split v #";\s+"))
 v2
 (seq v2)
+(count v2)
+(nth v2 2)
+(seq [(nth v2 2)])
 (split-comma-vec (nth v2 2))
-(map (seq v2) #(split-comma-vec %1) )
+
+(defn )
+(map  #(split-comma-vec (seq [%])) v2)
 (should= '("3 blue" "4 red") (split-comma-vec "3 blue, 4 red" ))
 (should= '(3 :blue) (split-color-pair-seq "3 blue"))
 
