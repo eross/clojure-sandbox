@@ -1,7 +1,7 @@
 (ns adventcode.advent2-spec
    (:require [speclj.core :refer :all]
             [func-design.core :refer :all]
-            [clojure.string :as str]
+            [clojure.string :as str :refer :all]
             [adventcode.advent2 :refer :all]))
 
 (def samples
@@ -12,7 +12,7 @@
    "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"])
 
 (str/split (first samples) #":\s+" )
-
+str/split
 (def g1 (getgames (first samples)))
 
 g1
@@ -31,14 +31,21 @@ v2
 (nth v2 2)
 (seq [(nth v2 2)])
 (split-comma-vec (nth v2 2))
+(defn col-pairs [p]
+  (loop [pairs p res []]
+    (if (empty? pairs)
+      res
+      (recur (rest pairs) (())))))
 
-(defn )
+
+(map (seq v2) #(split-comma-vec %1) )
+
 (map  #(split-comma-vec (seq [%])) v2)
 (should= '("3 blue" "4 red") (split-comma-vec "3 blue, 4 red" ))
 (should= '(3 :blue) (split-color-pair-seq "3 blue"))
 
 ;=======
-
+str/split
 (def a {})
 (map  )
 
@@ -50,14 +57,12 @@ v2
       (recur (rest v2) (conj res (first v2))))
     )
 )
+str/split
 
-(cons "1" [2])
-(conj ['( 1 2)] [(first v2)])
-(cons [(first v2)] '(1 2))
-(empty? ())
 
+str/split
 (first v2)
-
+str/split
 (def v3(str/split (first v2) #",\s+"))
 v3
 (first v3)
@@ -65,18 +70,33 @@ v3
 (let [[num color] (str/split (first v3) #"\s+")] [num color])
 (seq ["x" "b"])
 (split-comma-vec "3 blue, 4 red")
-
+(def v4 (split-comma-vec "3 blue, 4 red"))
+v4
 (last '(a b c))
-(def v '(3 "blue"))
+(def v '("3" "blue"))
 (first v)
-(seq ((first v)) (last v))
+(conj (last v) (first v))
 
 (def v "3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green")
+v
+(def v2 (str/split v #";"))
+(conj ['(2 3) '(4 5)] '(4 5))
+(conj (conj nil '(4 5)) '(9 8))
 
-(loop [[cl v res []]] 
+;("3 blue" "4 red")
+v4
+(split-color-pair-seq (first v4))
+(loop [cl v4 res nil]
+  (println cl)
   (if (empty? cl)
     res
-    (recur (rest cl) (cons (first cl)))))
-(str/split v #";\s+")
+    (recur (rest cl) (conj res (split-color-pair-seq(first cl))))))
 
-(str "x" "abc")
+(def x '(3 :blue))
+(def y '((4 :red)))
+y
+x
+(cons x y)
+(merge x y)
+(concat x y)
+(flatten [x y])
