@@ -47,19 +47,19 @@ v2
 ;=======
 str/split
 (def a {})
-(map  )
 
-(loop [vlst v2 res []]
-  (if (empty? vlst)
-    res
-    (let [[num color] (first vlst)]
-      (print (num))
-      (recur (rest v2) (conj res (first v2))))
-    )
-)
+
+;(loop [vlst v2 res []]
+;  (if (empty? vlst)
+;    res
+;    (let [[num color] (first vlst)]
+;      (print (num))
+;      (recur (rest v2) (conj res (first v2))))
+;    )
+;)
 str/split
 
-
+(comment 
 str/split
 (first v2)
 str/split
@@ -106,3 +106,4 @@ flatpair
 
 allpairs
 
+)

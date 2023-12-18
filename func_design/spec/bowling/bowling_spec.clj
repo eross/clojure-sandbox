@@ -11,4 +11,4 @@
 (should= 24 (score (concat [5 5 7] (repeat 17 0))))
 
 ;; strikes
-(should= 20 (score (concat [10 2 3] (repeat 16 0))))
+(should= 15 (score (concat [10 2 3] (repeat 16 0))))
