@@ -89,7 +89,6 @@ myset
 (def myarray (into-array ["this" "is" "an" "array"]))
 
 (aget myarray 2)
-
 (amap myarray idx ret (aset ret idx (apply str (reverse (aget myarray idx)))))
 
 (reverse (aget myarray 2))
@@ -102,3 +101,30 @@ myset
   (concat a b c))
 
 (fn-with-opts "a" "b" "c" "d")
+
+(def x1 [1 2 3])
+(def x2 '(a b c))
+(def x2v ['a 'b 'c])
+
+(into x2 x1)
+(conj x2 x1)
+
+(into x2v x1)
+(conj x2v x1)
+(concat x2v x1)
+
+(defrecord Foo [a b c])
+(class Foo)
+(supers (class Foo))
+
+(def f (Foo. 1 2 3))
+
+(supers (class f))
+
+(def v [1 2 3])
+(def l '(1 2 3))
+
+(def n [99 :bottles])
+(conj v n)
+(into v n)
+()
