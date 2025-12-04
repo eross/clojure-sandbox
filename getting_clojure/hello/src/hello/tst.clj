@@ -59,3 +59,27 @@ nums
              (recur (rest n) (inc c)))))
 
 (inc 3)
+
+;Problem 23, Reverse a Sequence
+
+(def s1 '[1 2 3 4 5])
+(def s2 (sorted-set 5 7 2 7))
+(def s3 '[[1 2] [3 4] [5 6]])
+
+(loop [s s1 o '()]
+  (print s)
+  (print o)
+  (if (= (last s) nil)
+    o
+    (recur (pop s) (cons (last s) o))))
+
+(conj nil 3)
+
+(pop s1)
+(last s1)
+ (last [])
+
+(conj (pop s1) (last s1) )
+(cons (last s1) (pop s1) )
+
+
