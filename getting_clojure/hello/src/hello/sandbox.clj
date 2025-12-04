@@ -1,3 +1,7 @@
+(ns hello.sandbox
+  (:require
+   [datomic.api :as d]))
+
 (defn intr [sep coll]
   (drop 1 (interleave (repeat sep) coll)))
 
@@ -41,12 +45,26 @@ prom
       (println "key:" key)
       (println "ref:" ref)
       (println "old: " old)
-      (println "new: " new)
-      ))
+      (println "new: " new)))
 
 
 (add-watch at :logger watcher)
 ; (swap! nat + 10) ; This will throw an error because 'nat' is not an atom.
 (swap! at + 10)
 refer
+(def from 0)
+(alter from - 1)
 
+(defn xfer [to from amount]
+  (dosync
+   (alter from - amount)
+   (alter to + amount)))
+
+;; (def amt 60)
+;; (let [t 42 f amt]
+;;   (xfer t f amt)
+;;   (print t f))
+
+(ns todo-db
+  (:require
+   [datomic.api :as d])) (
