@@ -62,16 +62,22 @@ nums
 
 ;Problem 23, Reverse a Sequence
 
+(def s0 '())
 (def s1 '[1 2 3 4 5])
 (def s2 (sorted-set 5 7 2 7))
 (def s3 '[[1 2] [3 4] [5 6]])
 
-(loop [s s1 o '()]
-  (print s)
-  (print o)
-  (if (= (last s) nil)
+(loop [s s1 o '()] 
+  (if (= (first s) nil)
     o
-    (recur (pop s) (cons (last s) o))))
+    (recur (rest s) (cons (first s) o))))
+
+ (fn [x] 
+          (loop [s x o '()]
+            (if (= (first s) nil)
+              o
+              (recur (rest s) (cons (first s) o))))
+ )
 
 (conj nil 3)
 
@@ -81,5 +87,70 @@ nums
 
 (conj (pop s1) (last s1) )
 (cons (last s1) (pop s1) )
+(cons (last s1) s0)
 
 
+(rest s1)
+ 
+ ; problem 24, Sum It All Up
+
+ (def s1 [2 4 6 8]
+   )
+
+(def s2 0)
+(+ s2 (first s1))
+(= (first '()) nil)
+(loop [n s1 s 0]
+  (if (= (first n) nil)
+    s
+    (recur (rest n) (+ s (first n)))))\
+
+(fn [x]
+  (loop [n x s 0]
+    (if (= (first n) nil)
+      s
+      (recur (rest n) (+ s (first n))))))\
+
+; problem 25, Find the Odd Numbers
+(def s1 [1 2 3 4 5 6 7 8 9 10])
+ 
+(filter odd? s1)
+
+(fn [x]
+  (filter odd? x))
+
+(loop [n s1 o '()]
+  (if (= (first n) nil)
+    o
+    (if (odd? (first n))
+      (recur (rest n) (conj o (first n)))
+      (recur (rest n) o))))
+
+
+
+;Problem 26, Fibonacci Sequence
+(vector 3)
+(cons 3 [1 1])
+
+ (loop [m 10 l 1 c 2 s '[1 1]]
+   (println "l" l)
+   (println "c" c)
+   (println "s" s)
+   (if (> c m)
+     (reverse s)
+     (recur m c (+ l c) (cons c s))))
+
+(fn [x] 
+  (loop [m x l 1 c 2 s '[1 1]] 
+    (if (>= c m)
+      (reverse s)
+      (recur m c (+ l c) (cons c s)))))
+
+ 
+(
+ (fn [x]
+   (loop [m (- x 2) l 1 c 2 s '[1 1]]
+     (if (= m 0)
+       (reverse s)
+       (recur (- m 1) c (+ l c) (cons c s)))))
+ 6)
