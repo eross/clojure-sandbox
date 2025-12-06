@@ -154,3 +154,18 @@ nums
        (reverse s)
        (recur (- m 1) c (+ l c) (cons c s)))))
  6)
+
+;problem 27 -- palindrome detector
+(def s1 '(1 2 3 2 1))
+(def s2 '(1 2 3 4 5))
+(def s3 '())
+(def s4 "abcd")
+(seq s4)
+(seq s1)
+(reverse s4)
+()
+(fn [x]
+  (= (seq x) (reverse x)))
+
+;Problem 28, Flatten a Sequence
+(def s1 '((1 2) (3 4) 5 6))
