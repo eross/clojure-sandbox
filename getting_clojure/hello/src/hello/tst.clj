@@ -169,3 +169,128 @@ nums
 
 ;Problem 28, Flatten a Sequence
 (def s1 '((1 2) (3 4) 5 6))
+(def s2 '(1 (2 (3 nil nil) (4 nil nil)) (5 (6 nil nil) nil)))
+(tree-seq list? rest s2)
+
+
+
+(flatten s2)
+
+(tree-seq s1)
+(first s1)
+
+(def t '((1 2 (3)) (4)))
+;;=> #'user/t
+
+;; Here the tree-seq uses 'sequential?' as the 'branch?' predicate.
+;; This causes the 'children' function to run for any collection.
+;; The 'seq' ('children') function recurses on all items in the collection.
+;; This results in a sequence of sub-trees, rooted at each node.
+(tree-seq sequential? seq t)
+;;=> (((1 2 (3)) (4))
+;;    (1 2 (3)) 1 2 
+;;    (3) 3 (4) 4)
+
+(defn flattenx [x]
+  (filter (complement sequential?)
+          (rest (tree-seq sequential? seq x))))
+(flattenx t)
+
+(sequential? '(1 2))
+(sequential? 3)
+(seq t)
+
+(tree-seq sequential? seq t)
+(rest (tree-seq sequential? seq t))
+(def t2 (rest (tree-seq sequential? seq t)))
+
+(tree-seq sequential? seq t)
+(println t2)
+(println "t" t)
+(println "t2" t2)
+
+(def fs
+  {:name "/"
+   :type :dir
+   :children [{:name "home"
+               :type :dir
+               :children [{:name "alice" :type :dir :children []}
+                          {:name "bob.txt" :type :file}]}
+              {:name "etc" :type :dir :children []}]})
+
+(tree-seq
+ #(and (map? %) (= (:type %) :dir) (seq (:children %)))  ; branch?
+ :children                                                ; children fn
+ fs)
+
+;; Returns every node in depth-first order:
+;; => ({:name "/", :type :dir, :children [...]}
+;;     {:name "home", ...}
+;;     {:name "alice", ...}
+;;     {:name "bob.txt", ...}
+;;     {:name "etc", ...})
+
+(def t3 '((1 2 (3)) (4)))
+
+(tree-seq seq? identity t3)
+;(((1 2 (3)) (4)) 
+; (1 2 (3)) 
+; 1 2 
+; (3) 
+; 3 
+; (4) 
+; 4)
+
+(def mystring "eric")
+(seq mystring)
+
+; Problem 29, Get the Caps
+
+(def s1 "HeLlO WoRlD!")
+(def s2 "nothing")
+(def s3 "$#A(*&987Zf")
+
+(def ss [s1 s2 s3])
+ss
+
+
+#(clojure.string/replace % #"[^A-Z]" "")
+
+
+(def lwcset
+  (set
+   (map char
+        (range
+         (int \A)
+         (inc (int \Z))))))
+(fn [s]
+  (apply str
+         (filter
+          (set
+           (map char
+                (range
+                 (int \A)
+                 (inc (int \Z)))))
+          s)))
+
+
+(apply str (filter lwcset s1))
+
+(map
+ (fn [s]
+   (apply str
+          (filter
+           (set
+            (map char
+                 (range
+                  (int \A)
+                  (inc (int \Z)))))
+           s)))
+ ss
+ 
+ )
+;-----
+
+(def squares (map #(* % %) (range)))
+
+(take 10 squares)
