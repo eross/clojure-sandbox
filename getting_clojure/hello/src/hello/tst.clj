@@ -294,3 +294,22 @@ ss
 (def squares (map #(* % %) (range)))
 
 (take 10 squares)
+
+;Problem 30, Compress a Sequence
+(def s1 [1 1 2 2 3 3 3 4 5 5])
+(def s2 [])
+(def s3 [1 2 3 4 5])
+
+(defn distinct [sq]
+  (let
+   [f (first sq)
+    n (nth sq 1)]
+    (if (= f n)
+      nil
+      f
+      )))
+(distinct '('a 'a 'b 'c 'c 'd 'd))
+
+(distinct s1)
+(first s1)
+(nth s1 2)
