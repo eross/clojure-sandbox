@@ -1,4 +1,4 @@
-(ns hello.core-test
+(ns ch4.core-test
 (:require [clojure.test :refer [is deftest testing]]))
 
 (is (= (+ 1 1) 1))
