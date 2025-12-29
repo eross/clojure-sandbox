@@ -1,5 +1,10 @@
 (ns hello.core)
 
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (println "Hello, World!"))
+
 *clojure-version*
 (defn square [x]
   (* x x x))
@@ -15,7 +20,7 @@
 
 (def v (vector "a" "b" 'c))
 (println v)
-(do (println v)v)
+(do (println v) v)
 
 (def xx v)
 (def xx ('a 'b 'c))
@@ -25,15 +30,15 @@
 ('a 'b 'c)
 (println xx)
 (do
- (println v)
-v)
+  (println v)
+  v)
 
 (println 42)
 ;;(println(rest v))
 
 
 
-(rest(rest (rest v)))
+(rest (rest (rest v)))
 
 (v 2)
 (vec v)
@@ -42,8 +47,8 @@ v)
 
 (conj v v)
 
-(def poems '(​"Iliad"​ ​"Odyssey"​ ​"Now We Are Six"​))
-(def vectorpoems '["Iliad"​ ​"Odyssey"​ ​"Now We Are Six"​])
+(def poems '(​ "Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​))
+(def vectorpoems '["Iliad" ​ ​ "Odyssey" ​ ​ "Now We Are Six" ​])
 
 ["Iliad" "Odyssey" "Now We Are Six"]
 

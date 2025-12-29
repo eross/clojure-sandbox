@@ -1,4 +1,9 @@
-(ns brave-and-true.main)
+(ns ch4.core)
+
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (println "Hello, World!"))
 
 (defn square [x]
   (* x x))
