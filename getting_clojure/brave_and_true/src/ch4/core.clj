@@ -3,7 +3,7 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println "Hello, ch4!"))
 
 (defn square [x]
   (* x x))
@@ -50,3 +50,49 @@
 (assoc (assoc {} :max (inc 30))
        :min (inc 10))
 
+;; lazy seqs
+
+(def vampire-database
+  {0 {:makes-blood-puns? false, :has-pulse? true :name "McFishwich"}
+   1 {:makes-blood-puns? false, :has-pulse? true :name "McMackson"}
+   2 {:makes-blood-puns? true,  :has-pulse? false :name "Damon Salvatore"}
+   3 {:makes-blood-puns? true,  :has-pulse? true :name "Mickey Mouse"}})
+
+(Thread/sleep 1000)
+(defn vampire-related-details
+  [social-security-number]
+  (Thread/sleep 1000)
+  (get vampire-database social-security-number))
+
+
+(defn vampire?
+  [record]
+  (and (:makes-blood-puns? record)
+       (not (:has-pulse? record))
+       record))
+
+(defn identify-vampire
+  [social-security-numbers]
+  (first (filter vampire?
+                 (map vampire-related-details social-security-numbers))))
+
+(time (vampire-related-details 0))
+
+(time (def mapped-details (map vampire-related-details (range 0 1000000))))
+
+;;(time (map vampire-related-details (range 0 5)))
+
+;;;(first mapped-details)
+;;(time (first mapped-details))
+
+;;; Don't do this.  Causes to evaluate all values
+;;; (count mapped-details)
+
+;;;(ns-unmap *ns* 'mapped-details)
+
+(take 8 (repeat "na"))
+
+(take 3 (repeatedly (fn [] (rand-int 10))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(print "Load of ch4 complete\n")
