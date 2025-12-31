@@ -94,5 +94,18 @@
 
 (take 3 (repeatedly (fn [] (rand-int 10))))
 
+(into {} '([1 2]))
+
+(into [] '(:garlic :sesame :fried-eggs))
+
+(into ["cherry"] '("pine" "spruce"))
+
+(defn my-conj
+  [target & additions]
+  (into target additions))
+
+(conj [1] [2])
+(into [1] [2])
+(my-conj [1] [2])
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (print "Load of ch4 complete\n")
