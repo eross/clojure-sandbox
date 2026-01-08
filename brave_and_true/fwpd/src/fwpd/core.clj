@@ -23,8 +23,7 @@
   [vamp-key value]
   ((get conversions vamp-key) value))
 
-
-
+(convert :glitter-index 3)
 
 
 ; Source - https://stackoverflow.com/q
