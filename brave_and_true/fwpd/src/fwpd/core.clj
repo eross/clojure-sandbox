@@ -62,3 +62,12 @@
 (parse (slurp filename))
 
 (clojure.string/split (slurp filename) #"\n")
+
+; breakdown of mapify
+;
+
+(def parsed (parse (slurp filename)))
+parsed
+
+
+
