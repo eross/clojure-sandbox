@@ -32,3 +32,19 @@
 
 42
 
+(defmacro backwards
+  [form]
+  (reverse form))
+
+  (backwards (" backwards" " am" "I" str))
+
+ (def addition-list (list + 1 2))
+ addition-list
+  
+ (eval addition-list)
+  
+ (concat '(3) [10])
+ (concat addition-list [10])
+ (eval (concat addition-list [10]))
+ (eval addition-list [3])
+
