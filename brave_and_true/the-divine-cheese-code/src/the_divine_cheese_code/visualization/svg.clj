@@ -10,3 +10,5 @@
   [locations]
   (clojure.string/join " " (map latlng->point locations)))
 
+
+(macroexpand latlng->point)
