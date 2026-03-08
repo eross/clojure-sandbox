@@ -7,8 +7,16 @@
 ;; Helper: valid-email?
 ;; ──────────────────────────────────────────────────────────────────────────────
 
+(comment
+  (true? 1)
+  (is (valid-email? "ericr@gmail.com"))
+  (is (valid-email? "ericr"))
+  ;;
+  )
+
 (deftest test-valid-email?
   (testing "valid email formats"
+    ;; (is (valid-email? "alice@example.com"))
     (is (true? (valid-email? "alice@example.com")))
     (is (true? (valid-email? "bob.smith+tag@sub.domain.co.uk")))
     (is (true? (valid-email? "a@b.c")))
